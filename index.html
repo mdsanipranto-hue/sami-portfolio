@@ -9,10 +9,10 @@
   <!-- Clean Tailwind CSS CDN (Standard & Safe) -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Safe External Fonts -->
+  <!-- Digonto.site Exact Typography: Archivo (Display/Headings), Inter (Body), JetBrains Mono (Numbers/Timecodes), Oswald (Wordmark) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Bebas+Neue&family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&family=Oswald:wght@700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700;800&family=Oswald:wght@700&display=swap" rel="stylesheet">
   
   <!-- Clean Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -23,17 +23,18 @@
         extend: {
           fontFamily: {
             archivo: ['"Archivo"', 'sans-serif'],
+            syne: ['"Archivo"', 'sans-serif'],
+            grotesk: ['"Archivo"', 'sans-serif'],
             oswald: ['"Oswald"', 'sans-serif'],
-            bebas: ['"Bebas Neue"', 'sans-serif'],
-            montserrat: ['"Montserrat"', 'sans-serif'],
-            jakarta: ['"Plus Jakarta Sans"', 'sans-serif'],
+            bebas: ['"Archivo"', 'sans-serif'],
+            jakarta: ['"Inter"', 'sans-serif'],
             inter: ['"Inter"', 'sans-serif'],
-            mono: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
             pageBg: '#050401',
-            surface: '#120E04',
-            surfaceElevated: '#1A1406',
+            surface: '#0F0C02',
+            surfaceElevated: '#171203',
             textPrimary: '#FFFFFF',
             textSecondary: '#FEF08A',
             textTertiary: '#FDE047',
@@ -50,10 +51,10 @@
   <style>
     :root {
       --bg-page: #050401;
-      --bg-surface: #120E04;
+      --bg-surface: #0F0C02;
       --text-main: #FFFFFF;
       --text-sec: #FEF08A;
-      --hairline: rgba(234, 179, 8, 0.28);
+      --hairline: rgba(234, 179, 8, 0.3);
       --accent: #EAB308;
       --ease-digo: cubic-bezier(0.16, 1, 0.3, 1);
     }
@@ -78,28 +79,103 @@
       pointer-events: none;
       z-index: 0;
       background:
-        radial-gradient(920px circle at 15% 10%, rgba(234, 179, 8, 0.18), transparent 64%),
-        radial-gradient(820px circle at 85% 18%, rgba(202, 138, 4, 0.14), transparent 62%),
-        radial-gradient(980px circle at 50% 90%, rgba(253, 224, 71, 0.12), transparent 68%);
+        radial-gradient(920px circle at 15% 10%, rgba(234, 179, 8, 0.16), transparent 64%),
+        radial-gradient(820px circle at 85% 18%, rgba(253, 224, 71, 0.12), transparent 62%),
+        radial-gradient(980px circle at 50% 90%, rgba(234, 179, 8, 0.12), transparent 68%);
     }
 
     .font-nav-clean {
-      font-family: 'Plus Jakarta Sans', 'Montserrat', sans-serif;
+      font-family: 'Archivo', 'Inter', sans-serif;
       font-weight: 600;
+      letter-spacing: -0.015em;
     }
 
     .font-headline-bebas {
-      font-family: 'Bebas Neue', sans-serif;
-      letter-spacing: 0.025em;
-      line-height: 1.02;
+      font-family: 'Archivo', sans-serif;
+      font-weight: 900;
+      letter-spacing: -0.035em;
+      line-height: 0.94;
+      text-transform: uppercase;
     }
 
     .font-mono-code {
-      font-family: 'Plus Jakarta Sans', 'Montserrat', sans-serif;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 11.5px;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.09em;
+      letter-spacing: 0.08em;
+    }
+
+    /* Strict Yellow, Black & White Color-Graded Address Pill */
+    .address-grade-pill {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.38rem 0.95rem;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, rgba(234, 179, 8, 0.25) 0%, rgba(15, 12, 2, 0.95) 55%, rgba(253, 224, 71, 0.2) 100%);
+      border: 1px solid rgba(253, 224, 71, 0.55);
+      box-shadow: 0 0 28px rgba(234, 179, 8, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+      transition: transform 0.45s var(--ease-digo), box-shadow 0.45s var(--ease-digo), border-color 0.35s ease;
+    }
+
+    .address-grade-pill:hover {
+      transform: translateY(-2px) scale(1.02);
+      border-color: #FDE047;
+      box-shadow: 0 0 36px rgba(253, 224, 71, 0.48), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    }
+
+    .address-grade-text {
+      background: linear-gradient(95deg, #FFFFFF 0%, #FEF08A 48%, #FDE047 80%, #EAB308 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: 'Archivo', sans-serif;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+    }
+
+    /* Digonto-Style JetBrains Mono Rolling Number Font */
+    .digo-num-roller {
+      display: inline-flex;
+      align-items: baseline;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -0.03em;
+      position: relative;
+      transition: transform 0.45s var(--ease-digo), color 0.35s ease, text-shadow 0.35s ease;
+      cursor: pointer;
+    }
+
+    .digo-num-roller:hover,
+    .glass-surface:hover .digo-num-roller {
+      color: #FDE047;
+      text-shadow: 0 0 26px rgba(253, 224, 71, 0.8);
+      transform: translateY(-2px) scale(1.04);
+    }
+
+    @keyframes digitSlotPop {
+      0% {
+        transform: translateY(65%) rotateX(-45deg);
+        opacity: 0;
+        filter: blur(4px);
+      }
+      60% {
+        transform: translateY(-8%) rotateX(8deg);
+        opacity: 1;
+        filter: blur(0px);
+      }
+      100% {
+        transform: translateY(0%) rotateX(0deg);
+        opacity: 1;
+        filter: blur(0px);
+      }
+    }
+
+    .digit-rolling {
+      animation: digitSlotPop 0.55s var(--ease-digo) forwards;
     }
 
     @keyframes lightLeakLoop {
@@ -489,17 +565,23 @@
   <!-- ==================== 2. HERO SECTION (00:00) ==================== -->
   <section id="hero" class="relative z-10 pt-24 sm:pt-28 pb-20 max-w-[1440px] mx-auto px-4 sm:px-8">
     
-    <!-- Meta Row -->
-    <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-yellow-500/30 font-mono-code text-yellow-200/90">
-      <div class="flex items-center gap-2 text-white">
+    <!-- Meta Row with Pure Yellow/Black/White Color-Graded Address Badge -->
+    <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-yellow-500/30 font-mono-code">
+      <div class="flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-yellow-400/15 border border-yellow-400/50 text-yellow-300 shadow-[0_0_20px_rgba(234,179,8,0.22)]">
         <span class="w-2.5 h-2.5 rounded-full bg-yellow-400 animate-pulse shadow-[0_0_12px_#FDE047]"></span>
-        <span>AVAILABLE FOR PROJECTS</span>
+        <span class="font-archivo font-bold tracking-wider text-white">AVAILABLE FOR PROJECTS</span>
       </div>
-      <div class="hidden md:block text-yellow-100/80">
-        DHAKA, BANGLADESH
+
+      <!-- Pure Yellow/White/Black Color Graded Address Pill -->
+      <div class="address-grade-pill" title="Click to scramble coordinates" onclick="scrambleAddressText(this)">
+        <i class="fa-solid fa-location-dot text-yellow-400 text-xs drop-shadow-[0_0_8px_rgba(250,204,21,0.8)]"></i>
+        <span id="hero-address-text" class="address-grade-text text-xs sm:text-[13px]">DHAKA, BANGLADESH</span>
+        <span class="text-yellow-400">•</span>
+        <span class="font-mono text-[10.5px] text-yellow-300 font-bold tracking-widest" id="dhaka-live-clock">23.81°N · UTC+6</span>
       </div>
-      <div class="text-yellow-200">
-        VIDEO EDITOR <span class="text-yellow-400 mx-1.5">·</span> MOTION DESIGNER <span class="text-yellow-400 mx-1.5">·</span> AI WORKFLOW
+
+      <div class="text-white font-archivo font-bold tracking-wider text-xs">
+        <span class="px-2 py-0.5 rounded bg-yellow-400 text-black mr-1">MAIN: TALKING HEAD</span> <span class="text-yellow-400 mx-1">·</span> MOTION <span class="text-yellow-400 mx-1">·</span> UI ANIMATION
       </div>
     </div>
 
@@ -560,38 +642,40 @@
     <!-- HERO BOTTOM SPLIT GRID -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
       <div class="lg:col-span-7 space-y-7">
-        <p class="text-xl sm:text-2xl md:text-[26px] leading-[1.42] tracking-[-0.01em]">
-          <span class="text-white font-semibold">I edit high-retention Talking Head Reels, custom Motion Graphics, sleek App UI Animations, and scroll-stopping Promotional Videos.</span>
-          <span class="text-yellow-100/80"> Enhanced with Claude and ChatGPT workflows for precise script tightening and hook ideation.</span>
+        <p class="font-inter text-xl sm:text-2xl md:text-[26px] leading-[1.45] tracking-[-0.015em]">
+          <span class="text-white font-semibold">I specialize in high-retention <span class="text-yellow-400 underline decoration-yellow-400/60 underline-offset-4">Talking Head Reels</span> as my primary craft—alongside custom Motion Graphics, sleek App UI Animations, and scroll-stopping Promotional Videos.</span>
+          <span class="text-yellow-100/80"> Enhanced with Claude and ChatGPT workflows for razor-sharp script tightening and hook engineering.</span>
         </p>
 
-        <!-- 4 Niche Chips -->
+        <!-- 4 Niche Chips with MAIN NICHE Highlighted on Talking Head -->
         <div class="pt-2">
           <div class="flex items-center gap-2.5 mb-3.5">
             <span class="w-2 h-2 rounded-full bg-yellow-400 shadow-[0_0_10px_#FDE047]"></span>
-            <p class="font-jakarta font-bold text-xs sm:text-sm uppercase tracking-[0.12em] text-yellow-200">
-              My 4 Core Editing Niches
+            <p class="font-archivo font-bold text-xs sm:text-sm uppercase tracking-[0.12em] text-yellow-200">
+              Primary Specialty &amp; Core Niches <span class="text-yellow-400/80 text-[11px] font-mono ml-1">(Hover numbers to roll)</span>
             </p>
           </div>
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            <a href="#chapter-1" class="glass-surface rounded-xl p-4 hover:-translate-y-1 transition-all group border border-yellow-500/30">
-              <span class="font-jakarta font-bold text-yellow-400 block text-xs">0<span class="stat-counter" data-target="1">0</span> · REELS</span>
-              <span class="font-jakarta font-bold text-sm sm:text-base text-white group-hover:text-yellow-300 mt-1 block">Talking Head</span>
-              <span class="font-inter text-[11px] text-yellow-200/80 mt-1 block">3× 9:16 Vertical</span>
+            <!-- MAIN NICHE: TALKING HEAD -->
+            <a href="#chapter-1" onmouseenter="rollCounterOnHover(this)" class="glass-surface rounded-xl p-4 hover:-translate-y-1.5 transition-all group border-2 border-yellow-400 bg-yellow-400/15 shadow-[0_0_30px_rgba(234,179,8,0.3)] relative">
+              <span class="absolute -top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-yellow-400 text-black font-mono font-extrabold text-[9px] uppercase tracking-wider shadow">★ MAIN NICHE</span>
+              <span class="font-mono font-extrabold text-yellow-300 block text-xs digo-num-roller">0<span class="stat-counter" data-target="1">1</span> · REELS</span>
+              <span class="font-archivo font-extrabold text-sm sm:text-base text-white group-hover:text-yellow-300 mt-1 block">Talking Head</span>
+              <span class="font-inter text-[11px] text-yellow-200 font-medium mt-1 block">Primary Specialty · 9:16</span>
             </a>
-            <a href="#chapter-2" class="glass-surface rounded-xl p-4 hover:-translate-y-1 transition-all group border border-yellow-500/30">
-              <span class="font-jakarta font-bold text-yellow-400 block text-xs">0<span class="stat-counter" data-target="2">0</span> · MOTION</span>
-              <span class="font-jakarta font-bold text-sm sm:text-base text-white group-hover:text-yellow-300 mt-1 block">Motion Graphic</span>
+            <a href="#chapter-2" onmouseenter="rollCounterOnHover(this)" class="glass-surface rounded-xl p-4 hover:-translate-y-1.5 transition-all group border border-yellow-500/30">
+              <span class="font-mono font-extrabold text-yellow-400 block text-xs digo-num-roller">0<span class="stat-counter" data-target="2">2</span> · MOTION</span>
+              <span class="font-archivo font-bold text-sm sm:text-base text-white group-hover:text-yellow-300 mt-1 block">Motion Graphic</span>
               <span class="font-inter text-[11px] text-yellow-200/80 mt-1 block">9:16 Reels &amp; 1:1</span>
             </a>
-            <a href="#chapter-3" class="glass-surface rounded-xl p-4 hover:-translate-y-1 transition-all group border border-yellow-500/30">
-              <span class="font-jakarta font-bold text-yellow-400 block text-xs">0<span class="stat-counter" data-target="3">0</span> · UI MOTION</span>
-              <span class="font-jakarta font-bold text-sm sm:text-base text-white group-hover:text-yellow-300 mt-1 block">App UI Animation</span>
+            <a href="#chapter-3" onmouseenter="rollCounterOnHover(this)" class="glass-surface rounded-xl p-4 hover:-translate-y-1.5 transition-all group border border-yellow-500/30">
+              <span class="font-mono font-extrabold text-yellow-400 block text-xs digo-num-roller">0<span class="stat-counter" data-target="3">3</span> · UI MOTION</span>
+              <span class="font-archivo font-bold text-sm sm:text-base text-white group-hover:text-yellow-300 mt-1 block">App UI Animation</span>
               <span class="font-inter text-[11px] text-yellow-200/80 mt-1 block">9:16 &amp; 16:9 Mix</span>
             </a>
-            <a href="#chapter-4" class="glass-surface rounded-xl p-4 hover:-translate-y-1 transition-all group border border-yellow-500/30">
-              <span class="font-jakarta font-bold text-yellow-400 block text-xs">0<span class="stat-counter" data-target="4">0</span> · AD CREATIVE</span>
-              <span class="font-jakarta font-bold text-sm sm:text-base text-white group-hover:text-yellow-300 mt-1 block">Promotional Video</span>
+            <a href="#chapter-4" onmouseenter="rollCounterOnHover(this)" class="glass-surface rounded-xl p-4 hover:-translate-y-1.5 transition-all group border border-yellow-500/30">
+              <span class="font-mono font-extrabold text-yellow-400 block text-xs digo-num-roller">0<span class="stat-counter" data-target="4">4</span> · AD CREATIVE</span>
+              <span class="font-archivo font-bold text-sm sm:text-base text-white group-hover:text-yellow-300 mt-1 block">Promotional Video</span>
               <span class="font-inter text-[11px] text-yellow-200/80 mt-1 block">3× 9:16 Reels</span>
             </a>
           </div>
@@ -600,37 +684,38 @@
 
       <div class="lg:col-span-5 lg:pl-8 flex flex-col justify-between space-y-8">
         <div class="flex flex-wrap items-center gap-3.5">
-          <a href="#reel" class="h-12 px-6 rounded-full bg-yellow-400 hover:bg-yellow-300 text-black font-jakarta font-bold text-sm flex items-center gap-2.5 transition-all shadow-[0_0_30px_rgba(253,224,71,0.3)]">
+          <a href="#reel" class="h-12 px-6 rounded-full bg-yellow-400 hover:bg-yellow-300 text-black font-archivo font-bold text-sm flex items-center gap-2.5 transition-all shadow-[0_0_30px_rgba(253,224,71,0.35)]">
             <i class="fa-solid fa-play text-[11px] text-black"></i>
             <span>Watch My Intro &amp; Reel</span>
           </a>
-          <button type="button" onclick="openBookingModal('Discovery Call')" class="h-12 px-6 rounded-full border border-yellow-500/40 hover:border-yellow-300 bg-yellow-950/40 text-white font-jakarta font-semibold text-sm transition-all shadow-[0_0_25px_rgba(234,179,8,0.25)]">
-            Book a Call
-          </button>
+          <a href="https://wa.me/8801568633466" target="_blank" rel="noopener noreferrer" class="h-12 px-6 rounded-full border border-yellow-400 hover:bg-yellow-400 hover:text-black bg-black text-white font-archivo font-bold text-sm transition-all flex items-center gap-2 shadow-[0_0_25px_rgba(234,179,8,0.25)]">
+            <i class="fa-brands fa-whatsapp text-yellow-400 group-hover:text-black text-base"></i>
+            <span>01568633466</span>
+          </a>
         </div>
 
         <div class="pt-3 border-t border-yellow-500/30">
-          <p class="font-jakarta font-bold text-xs uppercase tracking-[0.12em] text-yellow-200 mb-3">Software &amp; AI Stack</p>
+          <p class="font-archivo font-bold text-xs uppercase tracking-[0.12em] text-yellow-300 mb-3">Software &amp; AI Stack (Yellow / Black / White Edition)</p>
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-surfaceElevated border border-yellow-500/30">
-              <span class="w-7 h-7 rounded bg-[#00005B] border border-yellow-400/50 text-yellow-200 font-bold text-xs flex items-center justify-center shrink-0">Pr</span>
-              <span class="font-jakarta font-semibold text-xs text-white">Premiere Pro</span>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-black border border-yellow-400/40">
+              <span class="w-7 h-7 rounded bg-yellow-400 text-black font-mono font-extrabold text-xs flex items-center justify-center shrink-0">Pr</span>
+              <span class="font-archivo font-bold text-xs text-white">Premiere Pro</span>
             </div>
-            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-surfaceElevated border border-yellow-500/30">
-              <span class="w-7 h-7 rounded bg-[#00005B] border border-yellow-400/50 text-yellow-200 font-bold text-xs flex items-center justify-center shrink-0">Ae</span>
-              <span class="font-jakarta font-semibold text-xs text-white">After Effects</span>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-black border border-yellow-400/40">
+              <span class="w-7 h-7 rounded bg-yellow-400 text-black font-mono font-extrabold text-xs flex items-center justify-center shrink-0">Ae</span>
+              <span class="font-archivo font-bold text-xs text-white">After Effects</span>
             </div>
-            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-surfaceElevated border border-yellow-500/30">
-              <span class="w-7 h-7 rounded bg-white text-black font-extrabold text-xs flex items-center justify-center shrink-0">Cc</span>
-              <span class="font-jakarta font-semibold text-xs text-white">CapCut Pro</span>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-black border border-yellow-400/40">
+              <span class="w-7 h-7 rounded bg-white text-black font-mono font-extrabold text-xs flex items-center justify-center shrink-0">Cc</span>
+              <span class="font-archivo font-bold text-xs text-white">CapCut Pro</span>
             </div>
-            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-surfaceElevated border border-yellow-500/30">
-              <span class="w-7 h-7 rounded bg-[#10A37F] text-white font-extrabold text-xs flex items-center justify-center shrink-0">AI</span>
-              <span class="font-jakarta font-semibold text-xs text-white">ChatGPT</span>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-black border border-yellow-400/40">
+              <span class="w-7 h-7 rounded bg-yellow-400 text-black font-mono font-extrabold text-xs flex items-center justify-center shrink-0">AI</span>
+              <span class="font-archivo font-bold text-xs text-white">ChatGPT</span>
             </div>
-            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-surfaceElevated border border-yellow-500/30 col-span-2">
-              <span class="w-7 h-7 rounded bg-[#D97706] text-white font-extrabold text-xs flex items-center justify-center shrink-0">Cl</span>
-              <span class="font-jakarta font-semibold text-xs text-white">Claude AI Workflow</span>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-black border border-yellow-400/40 col-span-2">
+              <span class="w-7 h-7 rounded bg-white text-black font-mono font-extrabold text-xs flex items-center justify-center shrink-0">Cl</span>
+              <span class="font-archivo font-bold text-xs text-white">Claude AI Workflow</span>
             </div>
           </div>
         </div>
@@ -689,37 +774,37 @@
       <div id="showreel-slot" data-video-url="https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=1" class="hidden absolute inset-0 bg-black z-30"></div>
     </div>
 
-    <!-- Counting Stats Row -->
+    <!-- Counting Stats Row (JetBrains Mono Numbers + Hover/Scroll Roll) -->
     <div id="stats-row" class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-10">
-      <div class="glass-surface rounded-xl p-6">
-        <div class="font-archivo font-extrabold text-4xl sm:text-5xl text-white">
-          0<span class="stat-counter" data-target="4">0</span><span class="text-yellow-400">+</span>
+      <div onmouseenter="rollCounterOnHover(this)" class="glass-surface rounded-xl p-6 cursor-pointer group border border-yellow-400/40">
+        <div class="font-mono font-extrabold text-4xl sm:text-5xl text-white digo-num-roller">
+          0<span class="stat-counter" data-target="4">0</span><span class="text-yellow-400 group-hover:translate-x-1 transition-transform inline-block">+</span>
         </div>
-        <p class="font-nav-clean font-semibold text-sm text-white mt-2">Specialized Niches</p>
-        <p class="font-mono-code text-[10px] text-yellow-200/70 mt-0.5">TALKING HEAD · MOTION · UI · PROMO</p>
+        <p class="font-archivo font-bold text-sm text-white mt-2">Specialized Niches</p>
+        <p class="font-mono-code text-[10px] text-yellow-300 mt-0.5">★ TALKING HEAD MAIN + 3 MORE</p>
       </div>
 
-      <div class="glass-surface rounded-xl p-6">
-        <div class="font-archivo font-extrabold text-4xl sm:text-5xl text-white">
-          <span class="stat-counter" data-target="12">0</span><span class="text-yellow-400">+</span>
+      <div onmouseenter="rollCounterOnHover(this)" class="glass-surface rounded-xl p-6 cursor-pointer group border border-yellow-400/40">
+        <div class="font-mono font-extrabold text-4xl sm:text-5xl text-white digo-num-roller">
+          <span class="stat-counter" data-target="12">0</span><span class="text-yellow-400 group-hover:translate-x-1 transition-transform inline-block">+</span>
         </div>
-        <p class="font-nav-clean font-semibold text-sm text-white mt-2">Showcase Edits</p>
+        <p class="font-archivo font-bold text-sm text-white mt-2">Showcase Edits</p>
         <p class="font-mono-code text-[10px] text-yellow-200/70 mt-0.5">3 CURATED VIDEOS PER NICHE</p>
       </div>
 
-      <div class="glass-surface rounded-xl p-6">
-        <div class="font-archivo font-extrabold text-4xl sm:text-5xl text-white">
-          <span class="stat-counter" data-target="98">0</span><span class="text-yellow-400">%</span>
+      <div onmouseenter="rollCounterOnHover(this)" class="glass-surface rounded-xl p-6 cursor-pointer group border border-yellow-400/40">
+        <div class="font-mono font-extrabold text-4xl sm:text-5xl text-white digo-num-roller">
+          <span class="stat-counter" data-target="98">0</span><span class="text-yellow-400 group-hover:translate-x-1 transition-transform inline-block">%</span>
         </div>
-        <p class="font-nav-clean font-semibold text-sm text-white mt-2">Client Satisfaction</p>
+        <p class="font-archivo font-bold text-sm text-white mt-2">Client Satisfaction</p>
         <p class="font-mono-code text-[10px] text-yellow-200/70 mt-0.5">CLEAR COMMUNICATION &amp; PACING</p>
       </div>
 
-      <div class="glass-surface rounded-xl p-6">
-        <div class="font-archivo font-extrabold text-4xl sm:text-5xl text-white">
-          <span class="stat-counter" data-target="100">0</span><span class="text-yellow-400">%</span>
+      <div onmouseenter="rollCounterOnHover(this)" class="glass-surface rounded-xl p-6 cursor-pointer group border border-yellow-400/40">
+        <div class="font-mono font-extrabold text-4xl sm:text-5xl text-white digo-num-roller">
+          <span class="stat-counter" data-target="100">0</span><span class="text-yellow-400 group-hover:translate-x-1 transition-transform inline-block">%</span>
         </div>
-        <p class="font-nav-clean font-semibold text-sm text-white mt-2">Retention Focus</p>
+        <p class="font-archivo font-bold text-sm text-white mt-2">Retention Focus</p>
         <p class="font-mono-code text-[10px] text-yellow-200/70 mt-0.5">BUILT TO HOLD ATTENTION</p>
       </div>
     </div>
@@ -747,8 +832,8 @@
 
     <!-- Sticky Chapter Filter Bar -->
     <div class="sticky top-16 z-30 py-3 mb-12 -mx-4 px-4 sm:-mx-8 sm:px-8 bg-[#050401]/95 backdrop-blur-md border-y border-yellow-500/20 flex items-center gap-2 overflow-x-auto no-scrollbar font-mono-code text-xs">
-      <a href="#chapter-1" class="px-4 py-2 rounded-full bg-yellow-400 text-black font-bold whitespace-nowrap shadow-[0_0_15px_rgba(234,179,8,0.4)]">
-        00:48 · 01. TALKING HEAD
+      <a href="#chapter-1" class="px-4 py-2 rounded-full bg-yellow-400 text-black font-extrabold whitespace-nowrap shadow-[0_0_20px_rgba(234,179,8,0.5)]">
+        ★ 00:48 · 01. TALKING HEAD (MAIN NICHE)
       </a>
       <a href="#chapter-2" class="px-4 py-2 rounded-full bg-surfaceElevated border border-yellow-500/30 text-yellow-200 hover:text-white hover:border-yellow-400 transition-all whitespace-nowrap">
         01:32 · 02. MOTION GRAPHIC
@@ -764,17 +849,20 @@
     <!-- Chapter List -->
     <div class="space-y-28">
       
-      <!-- CHAPTER 01: Talking Head -->
-      <div id="chapter-1" class="work-chapter grid grid-cols-1 lg:grid-cols-12 gap-8 items-start scroll-mt-32">
+      <!-- CHAPTER 01: Talking Head (FLAGSHIP / MAIN NICHE) -->
+      <div id="chapter-1" class="work-chapter grid grid-cols-1 lg:grid-cols-12 gap-8 items-start scroll-mt-32 p-6 sm:p-8 rounded-2xl bg-yellow-400/[0.04] border-2 border-yellow-400/50 shadow-[0_0_45px_rgba(234,179,8,0.12)]">
         <div class="lg:col-span-4 lg:sticky lg:top-36 space-y-3">
-          <div class="font-mono-code text-yellow-300">00:48 — CHAPTER 01</div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-400 text-black font-mono-code font-extrabold text-[10px]">
+            <span>★ FLAGSHIP MAIN NICHE</span>
+          </div>
+          <div class="font-mono-code text-yellow-300 pt-1">00:48 — CHAPTER 01</div>
           <h3 class="font-headline-bebas text-4xl sm:text-5xl text-white tracking-wide">
             01. TALKING HEAD REELS
           </h3>
-          <p class="text-yellow-100/70 text-sm leading-relaxed">
-            High-retention 9:16 vertical Talking Head Reels. Snappy cuts, zero dead air, kinetic captions, and dynamic zoom keyframes built for social algorithms.
+          <p class="text-yellow-100/85 text-sm leading-relaxed">
+            My #1 core specialty. High-retention 9:16 vertical Talking Head Reels engineered for founders, coaches, and creators. Snappy cuts, zero dead air, custom kinetic captions, B-roll layering, and dynamic zoom keyframes built to dominate Instagram Reels, YouTube Shorts, and TikTok.
           </p>
-          <div class="pt-2 font-mono-code text-[11px] text-yellow-200">
+          <div class="pt-2 font-mono-code text-[11px] text-yellow-300 font-bold">
             3 EDITS · ALL 9:16 VERTICAL REELS
           </div>
         </div>
@@ -1088,71 +1176,152 @@
 
   <!-- ==================== 6. ABOUT SECTION (04:06) ==================== -->
   <section id="about" class="relative z-10 py-24 max-w-[1440px] mx-auto px-4 sm:px-8 border-t border-white/10">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
       
-      <!-- Profile Card -->
+      <!-- Profile Card with What I Do & Tools Summary -->
       <div class="lg:col-span-5">
-        <div class="bg-[#161616] border border-[#262626] hover:border-yellow-400/50 rounded-2xl overflow-hidden max-w-[380px] mx-auto shadow-2xl transition-transform duration-300">
+        <div class="bg-[#0A0801] border-2 border-yellow-400/50 hover:border-yellow-400 rounded-2xl overflow-hidden max-w-[400px] mx-auto shadow-[0_0_40px_rgba(234,179,8,0.2)] transition-all duration-300">
           <div class="relative w-full h-[420px] overflow-hidden bg-black">
             <img id="about-portrait-img" src="profile.png" alt="Amir Hamza Sami" class="w-full h-full object-cover portrait-rec709-mode" />
             
-            <div class="absolute top-3.5 left-3.5 px-3 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/15 flex items-center gap-2 font-mono-code text-[10px] text-white">
+            <div class="absolute top-3.5 left-3.5 px-3 py-1 rounded-full bg-black/85 backdrop-blur-md border border-yellow-400/40 flex items-center gap-2 font-mono-code text-[10px] text-white">
               <span class="w-2 h-2 rounded-full bg-yellow-400 animate-pulse"></span>
-              <span>REC · CUTTING LIVE</span>
+              <span>MAIN NICHE: TALKING HEAD</span>
             </div>
 
             <div class="absolute top-3.5 right-3.5 flex items-center gap-1.5">
               <button type="button" onclick="triggerPhotoUpload()" class="px-3 py-1 rounded-full bg-yellow-400 hover:bg-yellow-300 text-black font-mono-code font-bold text-[10px] shadow-lg transition-colors">
                 <i class="fa-solid fa-camera mr-1"></i> SELECT PHOTO
               </button>
+              <button type="button" onclick="exportFinalHtmlWithPhoto()" class="px-3 py-1 rounded-full bg-white hover:bg-yellow-200 text-black font-mono-code font-bold text-[10px] shadow-lg transition-colors" title="Download final index.html with your photo permanently embedded">
+                <i class="fa-solid fa-download mr-1"></i> SAVE FINAL CODE
+              </button>
             </div>
           </div>
 
-          <div class="p-6 text-center bg-[#161616] border-t border-white/10">
-            <h3 class="font-jakarta text-2xl font-semibold text-white tracking-wide mb-1">Amir Hamza Sami</h3>
-            <p class="text-sm text-yellow-200/80 mb-4">Video Editor &amp; Motion Designer</p>
-            <div class="flex items-center justify-center gap-2.5">
-              <button type="button" onclick="openBookingModal('General Inquiry')" class="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black font-jakarta font-bold text-xs px-5 py-2.5 rounded-lg transition-colors shadow-[0_0_15px_rgba(234,179,8,0.3)]">
-                <i class="fa-solid fa-envelope text-[11px]"></i>
-                <span>Get in Touch</span>
-              </button>
-              <button type="button" onclick="copyDiscordHandle('pranto_editz')" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-jakarta font-medium text-xs px-4 py-2.5 rounded-lg border border-white/15 transition-colors">
-                <i class="fa-brands fa-discord text-yellow-300"></i>
-                <span>Discord</span>
+          <div class="p-6 text-center bg-[#0A0801] border-t border-yellow-400/30 space-y-4">
+            <div>
+              <h3 class="font-archivo text-2xl font-extrabold text-white tracking-tight">Amir Hamza Sami</h3>
+              <p class="font-mono text-xs text-yellow-400 font-bold uppercase tracking-wider mt-1">★ Talking Head Specialist &amp; Motion Designer</p>
+            </div>
+
+            <!-- Quick Tools Badge Strip inside Profile Card -->
+            <div class="flex flex-wrap items-center justify-center gap-1.5 pt-1">
+              <span class="px-2.5 py-1 rounded bg-yellow-400 text-black font-mono font-bold text-[10px]">Premiere Pro</span>
+              <span class="px-2.5 py-1 rounded bg-yellow-400 text-black font-mono font-bold text-[10px]">After Effects</span>
+              <span class="px-2.5 py-1 rounded bg-white text-black font-mono font-bold text-[10px]">CapCut Pro</span>
+              <span class="px-2.5 py-1 rounded bg-black border border-yellow-400/50 text-yellow-300 font-mono font-bold text-[10px]">Claude AI</span>
+              <span class="px-2.5 py-1 rounded bg-black border border-yellow-400/50 text-yellow-300 font-mono font-bold text-[10px]">ChatGPT</span>
+            </div>
+
+            <div class="flex items-center justify-center gap-2.5 pt-2">
+              <a href="#contact" class="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black font-archivo font-bold text-xs px-5 py-2.5 rounded-lg transition-colors shadow-[0_0_15px_rgba(234,179,8,0.35)]">
+                <i class="fa-solid fa-paper-plane text-xs"></i>
+                <span>Start a Project</span>
+              </a>
+              <button type="button" onclick="copyDiscordHandle('pranto_editz')" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-archivo font-bold text-xs px-4 py-2.5 rounded-lg border border-yellow-400/30 transition-colors">
+                <i class="fa-brands fa-discord text-yellow-400"></i>
+                <span>pranto_editz</span>
               </button>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- About Bio -->
+      <!-- About Bio: What I Do, Flagship Niche & Complete Toolset -->
       <div class="lg:col-span-7 space-y-6">
         <div class="flex items-center gap-2 font-mono-code text-yellow-300">
           <span class="w-2 h-2 rounded-full bg-yellow-400"></span>
-          <span>04:06 — ABOUT THE EDITOR</span>
+          <span>04:06 — ABOUT THE EDITOR · WHAT I DO &amp; TOOLS I USE</span>
         </div>
 
-        <h2 class="font-archivo font-extrabold text-4xl sm:text-6xl tracking-tight text-white">
+        <h2 class="font-archivo font-black text-4xl sm:text-6xl tracking-tight text-white">
           Hi there, I'm <span class="brand-gradient-text">SAMI.</span>
         </h2>
 
-        <p class="text-white text-base sm:text-lg leading-relaxed">
-          I’m <strong class="text-white font-semibold">Amir Hamza Sami</strong>, a video editor and motion designer specializing in Talking Head Reels, Motion Graphics, App UI Animations, and Promotional Ads.
+        <p class="font-inter text-white text-base sm:text-lg leading-relaxed">
+          I’m <strong class="text-yellow-400 font-bold">Amir Hamza Sami</strong>, a professional Video Editor and Motion Designer from Dhaka, Bangladesh. My <strong class="px-2 py-0.5 rounded bg-yellow-400 text-black font-bold">Main Niche is High-Retention Talking Head Reels</strong>—helping creators, founders, and personal brands turn raw talking footage into viral, scroll-stopping vertical videos.
         </p>
 
-        <p class="text-yellow-100/80 text-sm sm:text-base leading-relaxed">
-          I combine Adobe Premiere Pro and After Effects with modern AI workflows (Claude &amp; ChatGPT) to craft pacing that captures and holds viewer attention from the first second.
-        </p>
+        <!-- Detailed What I Do Breakdown -->
+        <div class="glass-surface rounded-2xl p-5 border-2 border-yellow-400/50 space-y-3">
+          <div class="flex items-center justify-between">
+            <h3 class="font-archivo font-extrabold text-sm sm:text-base uppercase tracking-wider text-yellow-400">
+              ★ What I Do (Core Editing Services)
+            </h3>
+            <span class="font-mono text-[11px] text-white bg-yellow-400/20 border border-yellow-400/40 px-2.5 py-0.5 rounded-full">04 NICHES</span>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+            <div class="p-3 rounded-xl bg-yellow-400/15 border border-yellow-400">
+              <p class="font-archivo font-extrabold text-white">01. Talking Head Reels (MAIN NICHE)</p>
+              <p class="text-yellow-100/80 text-xs mt-1">Razor-sharp jump cuts, kinetic captions, B-roll storytelling, zoom keyframes &amp; retention hooks.</p>
+            </div>
+            <div class="p-3 rounded-xl bg-black/70 border border-yellow-500/30">
+              <p class="font-archivo font-bold text-white">02. Custom Motion Graphics</p>
+              <p class="text-yellow-100/75 text-xs mt-1">2D/3D kinetic typography, animated visual explainers &amp; speed-graph transitions.</p>
+            </div>
+            <div class="p-3 rounded-xl bg-black/70 border border-yellow-500/30">
+              <p class="font-archivo font-bold text-white">03. App UI Animation</p>
+              <p class="text-yellow-100/75 text-xs mt-1">3D camera tilts, SaaS product walkthroughs &amp; interactive cursor micro-animations.</p>
+            </div>
+            <div class="p-3 rounded-xl bg-black/70 border border-yellow-500/30">
+              <p class="font-archivo font-bold text-white">04. Promotional Videos</p>
+              <p class="text-yellow-100/75 text-xs mt-1">High-converting commercial reels, product launches &amp; sound-driven social ads.</p>
+            </div>
+          </div>
+        </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-          <div class="glass-surface rounded-xl p-4">
-            <p class="font-mono-code text-[10px] text-yellow-400">LOCATION</p>
-            <p class="font-nav-clean font-semibold text-sm text-white mt-1">Dhaka, Bangladesh (Remote Worldwide)</p>
+        <!-- Detailed Tools & AI Stack -->
+        <div class="glass-surface rounded-2xl p-5 border border-yellow-500/40 space-y-3">
+          <h3 class="font-archivo font-extrabold text-sm sm:text-base uppercase tracking-wider text-white">
+            Tools &amp; AI Workflow I Use Daily
+          </h3>
+          <div class="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
+            <div class="p-3 rounded-xl bg-black border border-yellow-400/40 text-center">
+              <span class="font-mono font-extrabold text-lg text-yellow-400 block">Pr</span>
+              <span class="font-archivo font-bold text-xs text-white block mt-1">Premiere Pro</span>
+              <span class="font-mono text-[9px] text-yellow-200/70">MAIN CUTTING</span>
+            </div>
+            <div class="p-3 rounded-xl bg-black border border-yellow-400/40 text-center">
+              <span class="font-mono font-extrabold text-lg text-yellow-400 block">Ae</span>
+              <span class="font-archivo font-bold text-xs text-white block mt-1">After Effects</span>
+              <span class="font-mono text-[9px] text-yellow-200/70">MOTION &amp; UI</span>
+            </div>
+            <div class="p-3 rounded-xl bg-black border border-yellow-400/40 text-center">
+              <span class="font-mono font-extrabold text-lg text-white block">Cc</span>
+              <span class="font-archivo font-bold text-xs text-white block mt-1">CapCut Pro</span>
+              <span class="font-mono text-[9px] text-yellow-200/70">FAST REELS</span>
+            </div>
+            <div class="p-3 rounded-xl bg-black border border-yellow-400/40 text-center">
+              <span class="font-mono font-extrabold text-lg text-yellow-400 block">Cl</span>
+              <span class="font-archivo font-bold text-xs text-white block mt-1">Claude AI</span>
+              <span class="font-mono text-[9px] text-yellow-200/70">SCRIPT POLISH</span>
+            </div>
+            <div class="p-3 rounded-xl bg-black border border-yellow-400/40 text-center col-span-2 sm:col-span-1">
+              <span class="font-mono font-extrabold text-lg text-white block">AI</span>
+              <span class="font-archivo font-bold text-xs text-white block mt-1">ChatGPT</span>
+              <span class="font-mono text-[9px] text-yellow-200/70">HOOK IDEATION</span>
+            </div>
           </div>
-          <div class="glass-surface rounded-xl p-4">
-            <p class="font-mono-code text-[10px] text-yellow-400">AI WORKFLOW</p>
-            <p class="font-nav-clean font-semibold text-sm text-white mt-1">Claude &amp; ChatGPT Script Optimization</p>
+        </div>
+
+        <!-- Location & Direct WhatsApp Card (Strictly Yellow, Black & White) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+          <div class="glass-surface rounded-xl p-4 border border-yellow-400/50 bg-black">
+            <div class="flex items-center justify-between">
+              <p class="font-mono-code text-[10px] text-yellow-400">LOCATION &amp; TIMEZONE</p>
+              <span class="w-2 h-2 rounded-full bg-yellow-400 animate-ping"></span>
+            </div>
+            <p class="address-grade-text text-sm sm:text-base mt-1 block">Dhaka, Bangladesh · Remote Worldwide</p>
+            <p class="font-mono text-[11px] text-yellow-200/80 mt-0.5">23.8103° N, 90.4125° E (GMT+6)</p>
           </div>
+          <a href="https://wa.me/8801568633466" target="_blank" rel="noopener noreferrer" class="glass-surface rounded-xl p-4 border-2 border-yellow-400 bg-yellow-400/10 hover:bg-yellow-400/20 transition-all block">
+            <p class="font-mono-code text-[10px] text-yellow-300">DIRECT WHATSAPP HOTLINE</p>
+            <p class="font-mono font-extrabold text-base sm:text-lg text-white mt-1 flex items-center gap-2">
+              <i class="fa-brands fa-whatsapp text-yellow-400"></i> 01568633466
+            </p>
+            <p class="font-mono text-[10px] text-yellow-200 mt-0.5">CLICK TO MESSAGE ON WHATSAPP →</p>
+          </a>
         </div>
       </div>
 
@@ -1178,25 +1347,28 @@
       </div>
 
       <div class="lg:col-span-4 flex flex-col items-start lg:items-end justify-end">
-        <button type="button" onclick="openBookingModal('WhatsApp Direct')" class="h-12 px-7 rounded-full bg-yellow-400 hover:bg-yellow-300 text-black font-nav-clean font-semibold text-sm flex items-center gap-2.5 shadow-[0_10px_30px_rgba(234,179,8,0.4)] transition-all">
-          <i class="fa-brands fa-whatsapp text-base"></i>
-          <span>Chat on WhatsApp</span>
+        <button type="button" onclick="openBookingModal('Project Inquiry')" class="h-12 px-7 rounded-full bg-yellow-400 hover:bg-yellow-300 text-black font-archivo font-extrabold text-sm flex items-center gap-2.5 shadow-[0_10px_30px_rgba(234,179,8,0.45)] transition-all">
+          <i class="fa-solid fa-calendar-check text-sm"></i>
+          <span>Quick Project Brief</span>
         </button>
       </div>
     </div>
 
     <!-- Contact Rows -->
     <div class="border-t border-white/15 divide-y divide-white/10">
-      <div onclick="openBookingModal('WhatsApp')" class="contact-channel-row py-5 px-3 flex items-center justify-between cursor-pointer">
+      <a href="https://wa.me/8801568633466?text=Hi%20Amir%20Hamza%20Sami!%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="contact-channel-row py-5 px-3 flex items-center justify-between cursor-pointer block">
         <div class="flex items-center gap-4">
-          <i class="fa-brands fa-whatsapp text-lg text-yellow-300 w-6"></i>
-          <span class="font-nav-clean font-semibold text-base text-white">WhatsApp</span>
+          <i class="fa-brands fa-whatsapp text-lg text-yellow-400 w-6"></i>
+          <div>
+            <span class="font-archivo font-bold text-base text-white">WhatsApp Direct</span>
+            <span class="block text-[11px] text-yellow-200/70 font-mono">Instant chat &amp; project booking</span>
+          </div>
         </div>
         <div class="flex items-center gap-4">
-          <span class="font-mono-code text-xs text-yellow-200/80">DIRECT MESSAGE</span>
-          <i class="fa-solid fa-arrow-up-right-from-square text-xs text-yellow-300"></i>
+          <span class="font-mono font-extrabold text-xs sm:text-sm text-black bg-yellow-400 px-3 py-1 rounded-md">01568633466</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs text-yellow-400"></i>
         </div>
-      </div>
+      </a>
 
       <a href="https://instagram.com/pranto_edits" target="_blank" rel="noopener noreferrer" class="contact-channel-row py-5 px-3 flex items-center justify-between cursor-pointer block">
         <div class="flex items-center gap-4">
@@ -1231,13 +1403,20 @@
   <!-- ==================== 8. FOOTER ==================== -->
   <footer class="relative z-10 py-10 max-w-[1440px] mx-auto px-4 sm:px-8 border-t border-white/10 font-mono-code text-xs text-yellow-200/70">
     <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-3">
+      <div class="flex flex-wrap items-center gap-3">
         <span class="font-oswald text-lg text-white"><span class="brand-gradient-text">SA</span>MI.</span>
-        <span>—</span>
-        <span>AMIR HAMZA SAMI · DHAKA, BANGLADESH</span>
+        <span class="text-yellow-500">—</span>
+        <span class="text-white font-archivo font-bold">AMIR HAMZA SAMI</span>
+        <span class="address-grade-pill py-1 px-3 text-[11px]">
+          <i class="fa-solid fa-location-dot text-yellow-400"></i>
+          <span class="address-grade-text">DHAKA, BANGLADESH</span>
+        </span>
       </div>
-      <div class="flex items-center gap-6">
-        <button type="button" onclick="copyDiscordHandle('pranto_editz')" class="text-yellow-200/60 hover:text-yellow-300 transition-colors flex items-center gap-1.5 cursor-pointer">
+      <div class="flex flex-wrap items-center gap-6">
+        <a href="https://wa.me/8801568633466" target="_blank" rel="noopener noreferrer" class="text-white hover:text-yellow-400 transition-colors flex items-center gap-1.5 font-mono font-bold">
+          <i class="fa-brands fa-whatsapp text-yellow-400"></i> 01568633466
+        </a>
+        <button type="button" onclick="copyDiscordHandle('pranto_editz')" class="text-yellow-200/80 hover:text-yellow-300 transition-colors flex items-center gap-1.5 cursor-pointer">
           <i class="fa-brands fa-discord text-yellow-400"></i> pranto_editz
         </button>
         <a href="#hero" class="text-yellow-300 hover:text-white transition-colors">BACK TO TOP ↑</a>
@@ -1372,21 +1551,83 @@
       }, { threshold: 0.22 });
       document.querySelectorAll('[data-word-reveal]').forEach(el => wordObserver.observe(el));
 
+      // Digonto-Style Smooth Odometer / Scrambling Number Animation (on Scroll & Hover)
       function animateCounterElement(el) {
         const target = parseInt(el.getAttribute('data-target') || '0', 10);
-        const duration = 1500;
+        const duration = 1100;
         const startTime = performance.now();
+        el.classList.remove('digit-rolling');
+        void el.offsetWidth;
+        el.classList.add('digit-rolling');
 
         function step(now) {
           const elapsed = now - startTime;
           const progress = Math.min(1, elapsed / duration);
-          const current = Math.round(progress * target);
-          el.textContent = current.toString();
+          // Cubic ease-out like Digonto's smooth deceleration
+          const eased = 1 - Math.pow(1 - progress, 3);
+          if (progress < 0.82 && target > 4) {
+            // Brief kinetic slot scramble before locking in
+            const jitter = Math.floor(Math.random() * 9);
+            const base = Math.floor(eased * target);
+            el.textContent = Math.min(target, base + (jitter % 3)).toString();
+          } else {
+            el.textContent = Math.round(eased * target).toString();
+          }
           if (progress < 1) requestAnimationFrame(step);
           else el.textContent = target.toString();
         }
         requestAnimationFrame(step);
       }
+
+      // Trigger number slot animation whenever user hovers over any stat or niche card
+      window.rollCounterOnHover = function(cardEl) {
+        const counter = cardEl.querySelector('.stat-counter');
+        if (counter) animateCounterElement(counter);
+      };
+
+      // Interactive Address Coordinate Scrambler + Live Dhaka Clock
+      window.scrambleAddressText = function(pillEl) {
+        const textEl = document.getElementById('hero-address-text');
+        if (!textEl) return;
+        const finalStr = 'DHAKA, BANGLADESH';
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789°•';
+        let frame = 0;
+        const timer = setInterval(() => {
+          textEl.textContent = finalStr
+            .split('')
+            .map((ch, idx) => {
+              if (ch === ' ' || ch === ',') return ch;
+              if (idx < frame / 1.5) return finalStr[idx];
+              return chars[Math.floor(Math.random() * chars.length)];
+            })
+            .join('');
+          frame++;
+          if (frame > finalStr.length * 1.6) {
+            clearInterval(timer);
+            textEl.textContent = finalStr;
+          }
+        }, 32);
+      };
+
+      function updateDhakaClock() {
+        const clockEl = document.getElementById('dhaka-live-clock');
+        if (!clockEl) return;
+        try {
+          const now = new Date();
+          const dhakaTime = now.toLocaleTimeString('en-US', {
+            timeZone: 'Asia/Dhaka',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: true
+          });
+          clockEl.textContent = `BDT ${dhakaTime}`;
+        } catch (e) {
+          clockEl.textContent = '23.81°N · UTC+6';
+        }
+      }
+      updateDhakaClock();
+      setInterval(updateDhakaClock, 1000);
 
       const counterObserver = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
@@ -1459,11 +1700,24 @@
             const aboutImg = document.getElementById('about-portrait-img');
             if (navImg) navImg.src = url;
             if (aboutImg) aboutImg.src = url;
-            showToastNotification('PHOTO UPDATED', 'Local image applied to preview.');
+            showToastNotification('PHOTO UPDATED', 'Click "SAVE FINAL CODE" to download index.html with your photo embedded!');
           };
           reader.readAsDataURL(file);
         });
       }
+
+      // Export final self-contained index.html with user's chosen photo permanently embedded
+      window.exportFinalHtmlWithPhoto = function() {
+        const htmlContent = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+        const blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'index.html';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        showToastNotification('FINAL CODE DOWNLOADED', 'Upload this index.html to GitHub—your photo is embedded inside!');
+      };
 
       let editingSlotKey = null;
       function getSlotEmbedUrl(key) {
@@ -1576,7 +1830,7 @@
 
       window.sendViaWhatsApp = function() {
         const text = encodeURIComponent(document.getElementById('booking-message').value.trim());
-        window.open(`https://wa.me/?text=${text}`, '_blank', 'noopener,noreferrer');
+        window.open(`https://wa.me/8801568633466?text=${text}`, '_blank', 'noopener,noreferrer');
       };
 
       function showToastNotification(title, message) {
