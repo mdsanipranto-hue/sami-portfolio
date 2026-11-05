@@ -690,7 +690,7 @@
         </p>
       </div>
 
-      <div id="showreel-slot" class="hidden absolute inset-0 bg-black z-30"></div>
+      <div id="showreel-slot" data-video-url="https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=1" class="hidden absolute inset-0 bg-black z-30"></div>
     </div>
 
     <!-- Counting Stats Row -->
@@ -749,18 +749,34 @@
       </p>
     </div>
 
+    <!-- Sticky Chapter Filter Bar -->
+    <div class="sticky top-16 z-30 py-3 mb-12 -mx-4 px-4 sm:-mx-8 sm:px-8 bg-[#050401]/95 backdrop-blur-md border-y border-yellow-500/20 flex items-center gap-2 overflow-x-auto no-scrollbar font-mono-code text-xs">
+      <a href="#chapter-1" class="px-4 py-2 rounded-full bg-yellow-400 text-black font-bold whitespace-nowrap shadow-[0_0_15px_rgba(234,179,8,0.4)]">
+        00:48 · 01. TALKING HEAD
+      </a>
+      <a href="#chapter-2" class="px-4 py-2 rounded-full bg-surfaceElevated border border-yellow-500/30 text-yellow-200 hover:text-white hover:border-yellow-400 transition-all whitespace-nowrap">
+        01:32 · 02. MOTION GRAPHIC
+      </a>
+      <a href="#chapter-3" class="px-4 py-2 rounded-full bg-surfaceElevated border border-yellow-500/30 text-yellow-200 hover:text-white hover:border-yellow-400 transition-all whitespace-nowrap">
+        02:16 · 03. APP UI ANIMATION
+      </a>
+      <a href="#chapter-4" class="px-4 py-2 rounded-full bg-surfaceElevated border border-yellow-500/30 text-yellow-200 hover:text-white hover:border-yellow-400 transition-all whitespace-nowrap">
+        03:00 · 04. PROMOTIONAL VIDEO
+      </a>
+    </div>
+
     <!-- Chapter List -->
-    <div class="space-y-24">
+    <div class="space-y-28">
       
       <!-- CHAPTER 01: Talking Head -->
-      <div id="chapter-1" class="work-chapter grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div id="chapter-1" class="work-chapter grid grid-cols-1 lg:grid-cols-12 gap-8 items-start scroll-mt-32">
         <div class="lg:col-span-4 lg:sticky lg:top-36 space-y-3">
           <div class="font-mono-code text-yellow-300">00:48 — CHAPTER 01</div>
           <h3 class="font-headline-bebas text-4xl sm:text-5xl text-white tracking-wide">
             01. TALKING HEAD REELS
           </h3>
           <p class="text-yellow-100/70 text-sm leading-relaxed">
-            High-retention 9:16 vertical Talking Head Reels. Snappy cuts, zero dead air, kinetic captions, and dynamic zoom keyframes.
+            High-retention 9:16 vertical Talking Head Reels. Snappy cuts, zero dead air, kinetic captions, and dynamic zoom keyframes built for social algorithms.
           </p>
           <div class="pt-2 font-mono-code text-[11px] text-yellow-200">
             3 EDITS · ALL 9:16 VERTICAL REELS
@@ -773,7 +789,7 @@
               <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=80" alt="Talking Head 01" class="card-thumb-img w-full h-full object-cover opacity-85" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/15 to-black/40"></div>
               <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-yellow-900/90 border border-yellow-400/40 font-mono-code text-[9px] text-yellow-200">9:16 REEL</span>
-              <button type="button" onclick="event.stopPropagation(); openVideoUrlModal('th-1')" class="absolute top-2.5 right-2.5 w-7 h-7 rounded bg-black/75 text-gray-300 hover:text-white flex items-center justify-center text-[10px]">
+              <button type="button" onclick="event.stopPropagation(); openVideoUrlModal('th-1')" class="absolute top-2.5 right-2.5 w-7 h-7 rounded bg-black/75 text-gray-300 hover:text-white flex items-center justify-center text-[10px]" title="Change video link">
                 <i class="fa-solid fa-link"></i>
               </button>
               <div class="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-yellow-400 text-black flex items-center justify-center shadow-[0_0_20px_rgba(253,224,71,0.8)] group-hover:scale-110 transition-transform">
@@ -789,7 +805,7 @@
               <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" alt="Talking Head 02" class="card-thumb-img w-full h-full object-cover opacity-85" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/15 to-black/40"></div>
               <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-yellow-900/90 border border-yellow-400/40 font-mono-code text-[9px] text-yellow-200">9:16 REEL</span>
-              <button type="button" onclick="event.stopPropagation(); openVideoUrlModal('th-2')" class="absolute top-2.5 right-2.5 w-7 h-7 rounded bg-black/75 text-gray-300 hover:text-white flex items-center justify-center text-[10px]">
+              <button type="button" onclick="event.stopPropagation(); openVideoUrlModal('th-2')" class="absolute top-2.5 right-2.5 w-7 h-7 rounded bg-black/75 text-gray-300 hover:text-white flex items-center justify-center text-[10px]" title="Change video link">
                 <i class="fa-solid fa-link"></i>
               </button>
               <div class="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-yellow-400 text-black flex items-center justify-center shadow-[0_0_20px_rgba(253,224,71,0.8)] group-hover:scale-110 transition-transform">
@@ -805,7 +821,7 @@
               <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=700&q=80" alt="Talking Head 03" class="card-thumb-img w-full h-full object-cover opacity-85" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/15 to-black/40"></div>
               <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-yellow-900/90 border border-yellow-400/40 font-mono-code text-[9px] text-yellow-200">9:16 REEL</span>
-              <button type="button" onclick="event.stopPropagation(); openVideoUrlModal('th-3')" class="absolute top-2.5 right-2.5 w-7 h-7 rounded bg-black/75 text-gray-300 hover:text-white flex items-center justify-center text-[10px]">
+              <button type="button" onclick="event.stopPropagation(); openVideoUrlModal('th-3')" class="absolute top-2.5 right-2.5 w-7 h-7 rounded bg-black/75 text-gray-300 hover:text-white flex items-center justify-center text-[10px]" title="Change video link">
                 <i class="fa-solid fa-link"></i>
               </button>
               <div class="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-yellow-400 text-black flex items-center justify-center shadow-[0_0_20px_rgba(253,224,71,0.8)] group-hover:scale-110 transition-transform">
@@ -814,6 +830,210 @@
               <div class="digo-scrub-bar"></div>
             </div>
             <h4 class="font-nav-clean font-semibold text-sm text-white">Viral Podcast Highlight Reel</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHAPTER 02: Motion Graphic -->
+      <div id="chapter-2" class="work-chapter grid grid-cols-1 lg:grid-cols-12 gap-8 items-start scroll-mt-32 border-t border-white/10 pt-16">
+        <div class="lg:col-span-4 lg:sticky lg:top-36 space-y-3">
+          <div class="font-mono-code text-yellow-300">01:32 — CHAPTER 02</div>
+          <h3 class="font-headline-bebas text-4xl sm:text-5xl text-white tracking-wide">
+            02. MOTION GRAPHICS
+          </h3>
+          <p class="text-yellow-100/70 text-sm leading-relaxed">
+            Custom 2D/3D kinetic typography, visual explainers, and animated title sequences. Tailored in 9:16 vertical for reels and 1:1 square for feed posts.
+          </p>
+          <div class="pt-2 font-mono-code text-[11px] text-yellow-200">
+            3 EDITS · 2× 9:16 REELS &amp; 1× 1:1 SQUARE
+          </div>
+        </div>
+
+        <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-5 chapter-cards-grid items-center">
+          <!-- 01: 9:16 Reel -->
+          <div class="digo-video-card glass-surface rounded-md p-3 flex flex-col justify-between group cursor-pointer" onclick="openVideoModal('mg-1', 'Kinetic Typography & Sound Design', '02. MOTION GRAPHIC', '9:16')">
+            <div class="relative aspect-[9/16] rounded overflow-hidden bg-black mb-3">
+              <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=700&q=80" alt="Motion Graphic 01" class="card-thumb-img w-full h-full object-cover opacity-85" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/15 to-black/40"></div>
+              <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-yellow-900/90 border border-yellow-400/40 font-mono-code text-[9px] text-yellow-200">9:16 REEL</span>
+              <button type="button" onclick="event.stopPropagation(); openVideoUrlModal('mg-1')" class="absolute top-2.5 right-2.5 w-7 h-7 rounded bg-black/75 text-gray-300 hover:text-white flex items-center justify-center text-[10px]" title="Change video link">
+                <i class="fa-solid fa-link"></i>
+              </button>
+              <div class="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-yellow-400 text-black flex items-center justify-center shadow-[0_0_20px_rgba(253,224,71,0.8)] group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-play text-xs ml-0.5"></i>
+              </div>
+              <div class="digo-scrub-bar"></div>
+            </div>
+            <h4 class="font-nav-clean font-semibold text-sm text-white">Kinetic Typography &amp; Sound</h4>
+          </div>
+
+          <!-- 02: 1:1 Square Motion -->
+          <div class="digo-video-card glass-surface rounded-md p-3 flex flex-col justify-between group cursor-pointer" onclick="openVideoModal('mg-2', 'Brand Identity 3D Loop Composition', '02. MOTION GRAPHIC', '1:1')">
+            <div class="relative aspect-square rounded overflow-hidden bg-black mb-3">
+              <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=700&q=80" alt="Motion Graphic 02" class="card-thumb-img w-full h-full object-cover opacity-85" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/15 to-black/40"></div>
+              <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-yellow-900/90 border border-yellow-400/40 font-mono-code text-[9px] text-yellow-200">1:1 SQUARE</span>
+              <button type="button" onclick="event.stopPropagation(); openVideoUrlModal('mg-2')" class="absolute top-2.5 right-2.5 w-7 h-7 rounded bg-black/75 text-gray-300 hover:text-white flex items-center justify-center text-[10px]" title="Change video link">
+                <i class="fa-solid fa-link"></i>
+              </button>
+              <div class="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-yellow-400 text-black flex items-center justify-center shadow-[0_0_20px_rgba(253,224,71,0.8)] group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-play text-xs ml-0.5"></i>
+              </div>
+              <div class="digo-scrub-bar"></div>
+            </div>
+            <h4 class="font-nav-clean font-semibold text-sm text-white">Brand 3D Motion Identity</h4>
+          </div>
+
+          <!-- 03: 9:16 Reel -->
+          <div class="digo-video-card glass-surface rounded-md p-3 flex flex-col justify-between group cursor-pointer" onclick="openVideoModal('mg-3', 'Social Story Motion Explainer', '02. MOTION GRAPHIC', '9:16')">
+            <div class="relative aspect-[9/16] rounded overflow-hidden bg-black mb-3">
+              <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=700&q=80" alt="Motion Graphic 03" class="card-thumb-img w-full h-full object-cover opacity-85" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/15 to-black/40"></div>
+              <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-yellow-900/90 border border-yellow-400/40 font-mono-code text-[9px] text-yellow-200">9:16 REEL</span>
+              <button type="button" onclick="event.stopPropagation(); openVideoUrlModal('mg-3')" class="absolute top-2.5 right-2.5 w-7 h-7 rounded bg-black/75 text-gray-300 hover:text-white flex items-center justify-center text-[10px]" title="Change video link">
+                <i class="fa-solid fa-link"></i>
+              </button>
+              <div class="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-yellow-400 text-black flex items-center justify-center shadow-[0_0_20px_rgba(253,224,71,0.8)] group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-play text-xs ml-0.5"></i>
+              </div>
+              <div class="digo-scrub-bar"></div>
+            </div>
+            <h4 class="font-nav-clean font-semibold text-sm text-white">Social Motion Explainer</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHAPTER 03: App UI Animation -->
+      <div id="chapter-3" class="work-chapter grid grid-cols-1 lg:grid-cols-12 gap-8 items-start scroll-mt-32 border-t border-white/10 pt-16">
+        <div class="lg:col-span-4 lg:sticky lg:top-36 space-y-3">
+          <div class="font-mono-code text-yellow-300">02:16 — CHAPTER 03</div>
+          <h3 class="font-headline-bebas text-4xl sm:text-5xl text-white tracking-wide">
+            03. APP UI ANIMATION
+          </h3>
+          <p class="text-yellow-100/70 text-sm leading-relaxed">
+            3D isometric perspective flows, cursor clicks, seamless transitions, and product mockups created in After Effects to showcase digital SaaS &amp; mobile apps.
+          </p>
+          <div class="pt-2 font-mono-code text-[11px] text-yellow-200">
+            3 EDITS · 1× 9:16 REEL + 1× 16:9 WIDE + 1× 9:16 REEL
+          </div>
+        </div>
+
+        <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-5 chapter-cards-grid items-center">
+          <!-- 01: 9:16 Reel -->
+          <div class="digo-video-card glass-surface rounded-md p-3 flex flex-col justify-between group cursor-pointer" onclick="openVideoModal('ui-1', 'Mobile App Onboarding Flow Reel', '03. APP UI ANIMATION', '9:16')">
+            <div class="relative aspect-[9/16] rounded overflow-hidden bg-black mb-3">
+              <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=700&q=80" alt="App UI 01" class="card-thumb-img w-full h-full object-cover opacity-85" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/15 to-black/40"></div>
+              <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-yellow-900/90 border border-yellow-400/40 font-mono-code text-[9px] text-yellow-200">9:16 REEL</span>
+              <button type="button" onclick="event.stopPropagation(); openVideoUrlModal('ui-1')" class="absolute top-2.5 right-2.5 w-7 h-7 rounded bg-black/75 text-gray-300 hover:text-white flex items-center justify-center text-[10px]" title="Change video link">
+                <i class="fa-solid fa-link"></i>
+              </button>
+              <div class="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-yellow-400 text-black flex items-center justify-center shadow-[0_0_20px_rgba(253,224,71,0.8)] group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-play text-xs ml-0.5"></i>
+              </div>
+              <div class="digo-scrub-bar"></div>
+            </div>
+            <h4 class="font-nav-clean font-semibold text-sm text-white">Mobile Onboarding Flow Reel</h4>
+          </div>
+
+          <!-- 02: 16:9 Widescreen SaaS Showcase -->
+          <div class="digo-video-card glass-surface rounded-md p-3 flex flex-col justify-between group cursor-pointer" onclick="openVideoModal('ui-2', 'SaaS Dashboard Feature Tour 16:9', '03. APP UI ANIMATION', '16:9')">
+            <div class="relative aspect-video rounded overflow-hidden bg-black mb-3">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt="App UI 02" class="card-thumb-img w-full h-full object-cover opacity-85" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/15 to-black/40"></div>
+              <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-yellow-900/90 border border-yellow-400/40 font-mono-code text-[9px] text-yellow-200">16:9 WIDE</span>
+              <button type="button" onclick="event.stopPropagation(); openVideoUrlModal('ui-2')" class="absolute top-2.5 right-2.5 w-7 h-7 rounded bg-black/75 text-gray-300 hover:text-white flex items-center justify-center text-[10px]" title="Change video link">
+                <i class="fa-solid fa-link"></i>
+              </button>
+              <div class="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-yellow-400 text-black flex items-center justify-center shadow-[0_0_20px_rgba(253,224,71,0.8)] group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-play text-xs ml-0.5"></i>
+              </div>
+              <div class="digo-scrub-bar"></div>
+            </div>
+            <h4 class="font-nav-clean font-semibold text-sm text-white">SaaS Feature Promo (16:9)</h4>
+          </div>
+
+          <!-- 03: 9:16 Reel -->
+          <div class="digo-video-card glass-surface rounded-md p-3 flex flex-col justify-between group cursor-pointer" onclick="openVideoModal('ui-3', 'Fintech Interaction Micro-animations Reel', '03. APP UI ANIMATION', '9:16')">
+            <div class="relative aspect-[9/16] rounded overflow-hidden bg-black mb-3">
+              <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=700&q=80" alt="App UI 03" class="card-thumb-img w-full h-full object-cover opacity-85" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/15 to-black/40"></div>
+              <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-yellow-900/90 border border-yellow-400/40 font-mono-code text-[9px] text-yellow-200">9:16 REEL</span>
+              <button type="button" onclick="event.stopPropagation(); openVideoUrlModal('ui-3')" class="absolute top-2.5 right-2.5 w-7 h-7 rounded bg-black/75 text-gray-300 hover:text-white flex items-center justify-center text-[10px]" title="Change video link">
+                <i class="fa-solid fa-link"></i>
+              </button>
+              <div class="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-yellow-400 text-black flex items-center justify-center shadow-[0_0_20px_rgba(253,224,71,0.8)] group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-play text-xs ml-0.5"></i>
+              </div>
+              <div class="digo-scrub-bar"></div>
+            </div>
+            <h4 class="font-nav-clean font-semibold text-sm text-white">Fintech UI Micro-Reel</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHAPTER 04: Promotional Video -->
+      <div id="chapter-4" class="work-chapter grid grid-cols-1 lg:grid-cols-12 gap-8 items-start scroll-mt-32 border-t border-white/10 pt-16">
+        <div class="lg:col-span-4 lg:sticky lg:top-36 space-y-3">
+          <div class="font-mono-code text-yellow-300">03:00 — CHAPTER 04</div>
+          <h3 class="font-headline-bebas text-4xl sm:text-5xl text-white tracking-wide">
+            04. PROMOTIONAL VIDEOS
+          </h3>
+          <p class="text-yellow-100/70 text-sm leading-relaxed">
+            Fast-paced, hook-driven commercial and e-commerce promotional reels. Timed sound design, dynamic sound effects, and strong call-to-actions built to convert.
+          </p>
+          <div class="pt-2 font-mono-code text-[11px] text-yellow-200">
+            3 EDITS · ALL 9:16 COMMERCIAL REELS
+          </div>
+        </div>
+
+        <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-5 chapter-cards-grid">
+          <div class="digo-video-card glass-surface rounded-md p-3 flex flex-col justify-between group cursor-pointer" onclick="openVideoModal('pv-1', 'D2C E-commerce Product Launch Reel', '04. PROMOTIONAL VIDEO', '9:16')">
+            <div class="relative aspect-[9/16] rounded overflow-hidden bg-black mb-3">
+              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=80" alt="Promotional 01" class="card-thumb-img w-full h-full object-cover opacity-85" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/15 to-black/40"></div>
+              <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-yellow-900/90 border border-yellow-400/40 font-mono-code text-[9px] text-yellow-200">9:16 REEL</span>
+              <button type="button" onclick="event.stopPropagation(); openVideoUrlModal('pv-1')" class="absolute top-2.5 right-2.5 w-7 h-7 rounded bg-black/75 text-gray-300 hover:text-white flex items-center justify-center text-[10px]" title="Change video link">
+                <i class="fa-solid fa-link"></i>
+              </button>
+              <div class="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-yellow-400 text-black flex items-center justify-center shadow-[0_0_20px_rgba(253,224,71,0.8)] group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-play text-xs ml-0.5"></i>
+              </div>
+              <div class="digo-scrub-bar"></div>
+            </div>
+            <h4 class="font-nav-clean font-semibold text-sm text-white">Product Launch Commercial</h4>
+          </div>
+
+          <div class="digo-video-card glass-surface rounded-md p-3 flex flex-col justify-between group cursor-pointer" onclick="openVideoModal('pv-2', 'Fitness Brand High-Energy Reel', '04. PROMOTIONAL VIDEO', '9:16')">
+            <div class="relative aspect-[9/16] rounded overflow-hidden bg-black mb-3">
+              <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=700&q=80" alt="Promotional 02" class="card-thumb-img w-full h-full object-cover opacity-85" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/15 to-black/40"></div>
+              <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-yellow-900/90 border border-yellow-400/40 font-mono-code text-[9px] text-yellow-200">9:16 REEL</span>
+              <button type="button" onclick="event.stopPropagation(); openVideoUrlModal('pv-2')" class="absolute top-2.5 right-2.5 w-7 h-7 rounded bg-black/75 text-gray-300 hover:text-white flex items-center justify-center text-[10px]" title="Change video link">
+                <i class="fa-solid fa-link"></i>
+              </button>
+              <div class="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-yellow-400 text-black flex items-center justify-center shadow-[0_0_20px_rgba(253,224,71,0.8)] group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-play text-xs ml-0.5"></i>
+              </div>
+              <div class="digo-scrub-bar"></div>
+            </div>
+            <h4 class="font-nav-clean font-semibold text-sm text-white">Fitness High-Energy Promo</h4>
+          </div>
+
+          <div class="digo-video-card glass-surface rounded-md p-3 flex flex-col justify-between group cursor-pointer" onclick="openVideoModal('pv-3', 'Agency Service Ad Conversion Reel', '04. PROMOTIONAL VIDEO', '9:16')">
+            <div class="relative aspect-[9/16] rounded overflow-hidden bg-black mb-3">
+              <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=700&q=80" alt="Promotional 03" class="card-thumb-img w-full h-full object-cover opacity-85" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/15 to-black/40"></div>
+              <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-yellow-900/90 border border-yellow-400/40 font-mono-code text-[9px] text-yellow-200">9:16 REEL</span>
+              <button type="button" onclick="event.stopPropagation(); openVideoUrlModal('pv-3')" class="absolute top-2.5 right-2.5 w-7 h-7 rounded bg-black/75 text-gray-300 hover:text-white flex items-center justify-center text-[10px]" title="Change video link">
+                <i class="fa-solid fa-link"></i>
+              </button>
+              <div class="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-yellow-400 text-black flex items-center justify-center shadow-[0_0_20px_rgba(253,224,71,0.8)] group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-play text-xs ml-0.5"></i>
+              </div>
+              <div class="digo-scrub-bar"></div>
+            </div>
+            <h4 class="font-nav-clean font-semibold text-sm text-white">Agency Service Conversion Ad</h4>
           </div>
         </div>
       </div>
@@ -900,11 +1120,17 @@
 
           <div class="p-6 text-center bg-[#161616] border-t border-white/10">
             <h3 class="font-jakarta text-2xl font-semibold text-white tracking-wide mb-1">Amir Hamza Sami</h3>
-            <p class="text-sm text-[#a3a3a3] mb-4">Video Editor &amp; Motion Designer</p>
-            <a href="https://portfolio.malloy.sg/mdsanipranto" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] text-black font-jakarta font-bold text-xs px-5 py-2.5 rounded-lg transition-colors">
-              <span>Malloy Portfolio</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </a>
+            <p class="text-sm text-yellow-200/80 mb-4">Video Editor &amp; Motion Designer</p>
+            <div class="flex items-center justify-center gap-2.5">
+              <button type="button" onclick="openBookingModal('General Inquiry')" class="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black font-jakarta font-bold text-xs px-5 py-2.5 rounded-lg transition-colors shadow-[0_0_15px_rgba(234,179,8,0.3)]">
+                <i class="fa-solid fa-envelope text-[11px]"></i>
+                <span>Get in Touch</span>
+              </button>
+              <button type="button" onclick="copyDiscordHandle('pranto_editz')" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-jakarta font-medium text-xs px-4 py-2.5 rounded-lg border border-white/15 transition-colors">
+                <i class="fa-brands fa-discord text-yellow-300"></i>
+                <span>Discord</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -1075,23 +1301,23 @@
     </div>
   </div>
 
-  <!--
-    PRE-PUBLISH CHECKLIST:
-    1) Add your own profile.png (or profile.jpg/profile.jpeg) beside this HTML file.
-    2) Replace the four empty videoSlots values below with your YouTube video URLs/IDs.
-    3) Replace the Instagram/Discord handles if they are not yours.
-    4) Add your WhatsApp number to WHATSAPP_NUMBER below (digits only, country code included).
-    5) No Gemini API key or Gemini API integration is required for this static portfolio.
-  -->
   <!-- Pure, Clean Vanilla JavaScript Engine (No External Trackers / No Injected Tokens) -->
   <script>
     (() => {
-      // Replace these demo IDs with your own YouTube video IDs before publishing.
       const videoSlots = {
-        'showreel-slot': '',
-        'th-1': '',
-        'th-2': '',
-        'th-3': ''
+        'showreel-slot': 'https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=1',
+        'th-1': 'https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=1',
+        'th-2': 'https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=1',
+        'th-3': 'https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=1',
+        'mg-1': 'https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=1',
+        'mg-2': 'https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=1',
+        'mg-3': 'https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=1',
+        'ui-1': 'https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=1',
+        'ui-2': 'https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=1',
+        'ui-3': 'https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=1',
+        'pv-1': 'https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=1',
+        'pv-2': 'https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=1',
+        'pv-3': 'https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=1'
       };
 
       const heroWordmark = document.getElementById('hero-wordmark');
@@ -1191,17 +1417,14 @@
         'profile.png',
         'profile.jpg',
         'profile.jpeg',
-        ''
+        'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=80'
       ];
 
       window.tryNextAvatarFormat = function(imgEl) {
         const idx = parseInt(imgEl.getAttribute('data-try-idx') || '0', 10) + 1;
-        if (idx < fallbackCandidates.length && fallbackCandidates[idx]) {
+        if (idx < fallbackCandidates.length) {
           imgEl.setAttribute('data-try-idx', idx.toString());
           imgEl.src = fallbackCandidates[idx];
-        } else {
-          // No profile image supplied yet: hide the broken image instead of showing an unrelated photo.
-          imgEl.style.visibility = 'hidden';
         }
       };
 
@@ -1222,30 +1445,18 @@
 
       let editingSlotKey = null;
       function getSlotEmbedUrl(key) {
-        return videoSlots[key] || '';
+        return videoSlots[key] || 'https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=1';
       }
 
       window.playInlineSlot = function(slotId) {
         const el = document.getElementById(slotId);
         if (!el) return;
         const url = getSlotEmbedUrl(slotId);
-        if (!url) {
-          showToastNotification('VIDEO NOT SET', 'Add your YouTube link using the video edit option first.');
-          return;
-        }
         el.classList.remove('hidden');
-        const iframe = document.createElement('iframe');
-        iframe.className = 'w-full h-full';
-        iframe.src = url;
-        iframe.title = 'Video Player';
-        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-        iframe.allowFullscreen = true;
-        const close = document.createElement('button');
-        close.type = 'button';
-        close.className = 'absolute top-4 right-4 px-3 py-1.5 rounded-full bg-black/80 hover:bg-yellow-400 hover:text-black text-white font-mono-code text-[10px] border border-white/20 z-40 transition-colors';
-        close.textContent = 'CLOSE ✕';
-        close.addEventListener('click', () => window.stopInlineSlot(slotId));
-        el.replaceChildren(iframe, close);
+        el.innerHTML = `
+          <iframe class="w-full h-full" src="${url}" title="Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <button type="button" onclick="stopInlineSlot('${slotId}')" class="absolute top-4 right-4 px-3 py-1.5 rounded-full bg-black/80 hover:bg-yellow-400 hover:text-black text-white font-mono-code text-[10px] border border-white/20 z-40 transition-colors">CLOSE ✕</button>
+        `;
       };
 
       window.stopInlineSlot = function(slotId) {
@@ -1265,23 +1476,16 @@
         if (ratio === '9:16') {
           box.className = 'w-full max-w-[390px] glass-surface rounded-xl border border-yellow-400/60 overflow-hidden shadow-2xl';
           container.className = 'aspect-[9/16] w-full bg-black';
+        } else if (ratio === '1:1') {
+          box.className = 'w-full max-w-[480px] glass-surface rounded-xl border border-yellow-400/60 overflow-hidden shadow-2xl';
+          container.className = 'aspect-square w-full bg-black';
         } else {
           box.className = 'w-full max-w-4xl glass-surface rounded-xl border border-yellow-400/60 overflow-hidden shadow-2xl';
           container.className = 'aspect-video w-full bg-black';
         }
 
         const url = getSlotEmbedUrl(slotKey);
-        if (!url) {
-          showToastNotification('VIDEO NOT SET', 'Add your YouTube link using the video edit option first.');
-          return;
-        }
-        const iframe = document.createElement('iframe');
-        iframe.className = 'w-full h-full';
-        iframe.src = url;
-        iframe.title = title;
-        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-        iframe.allowFullscreen = true;
-        container.replaceChildren(iframe);
+        container.innerHTML = `<iframe class="w-full h-full" src="${url}" title="${title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
         modal.classList.remove('hidden');
         modal.classList.add('flex');
       };
@@ -1311,28 +1515,15 @@
       window.saveCustomVideoUrl = function() {
         const raw = document.getElementById('custom-video-input').value.trim();
         if (!raw || !editingSlotKey) return;
-        let u;
+        let embed = raw;
         try {
-          u = new URL(raw);
-        } catch (e) {
-          showToastNotification('INVALID LINK', 'Paste a valid YouTube video URL.');
-          return;
-        }
-        const host = u.hostname.toLowerCase().replace(/^www\\./, '');
-        let videoId = '';
-        if (host === 'youtu.be') videoId = u.pathname.split('/').filter(Boolean)[0] || '';
-        else if (host === 'youtube.com' || host === 'm.youtube.com') {
-          videoId = u.searchParams.get('v') || '';
-          if (!videoId && u.pathname.includes('/shorts/')) videoId = u.pathname.split('/shorts/')[1].split('/')[0];
-          if (!videoId && u.pathname.includes('/embed/')) videoId = u.pathname.split('/embed/')[1].split('/')[0];
-        }
-        if (!/^[a-zA-Z0-9_-]{11}$/.test(videoId)) {
-          showToastNotification('INVALID YOUTUBE LINK', 'Use a standard YouTube video, Shorts, or youtu.be link.');
-          return;
-        }
-        videoSlots[editingSlotKey] = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+          const u = new URL(raw);
+          if (u.hostname.includes('youtu.be')) embed = `https://www.youtube.com/embed/${u.pathname.slice(1)}?autoplay=1`;
+          else if (u.searchParams.get('v')) embed = `https://www.youtube.com/embed/${u.searchParams.get('v')}?autoplay=1`;
+          else if (u.pathname.includes('/shorts/')) embed = `https://www.youtube.com/embed/${u.pathname.split('/shorts/')[1]}?autoplay=1`;
+        } catch (e) {}
+        videoSlots[editingSlotKey] = embed;
         window.closeVideoUrlModal();
-        showToastNotification('VIDEO LINK SAVED', 'This change lasts until the page is refreshed. Update the videoSlots values in the HTML to keep it permanently.');
       };
 
       window.toggleMobileMenu = function() {
@@ -1363,13 +1554,7 @@
 
       window.sendViaWhatsApp = function() {
         const text = encodeURIComponent(document.getElementById('booking-message').value.trim());
-        // Optional: enter your WhatsApp number with country code, digits only (e.g. 8801XXXXXXXXX).
-        // Leave empty to let visitors choose a WhatsApp contact.
-        const WHATSAPP_NUMBER = '';
-        const destination = WHATSAPP_NUMBER
-          ? `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`
-          : `https://wa.me/?text=${text}`;
-        window.open(destination, '_blank', 'noopener,noreferrer');
+        window.open(`https://wa.me/?text=${text}`, '_blank', 'noopener,noreferrer');
       };
 
       // Toast Display Helper
